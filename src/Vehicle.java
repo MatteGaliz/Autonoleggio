@@ -1,7 +1,9 @@
+import java.io.Serializable;
+
 /**
  * @author Matteo Galiazzo
  */
-public class Vehicle {
+public class Vehicle implements Serializable {
     private String licensePlate;
     private String manufacturer;
     private String model;

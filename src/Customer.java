@@ -1,8 +1,9 @@
+import java.io.Serializable;
 
 /**
  * @author Matteo Galiazzo
  */
-public class Customer extends Person {
+public class Customer extends Person implements Serializable {
     
     private String taxCode;
     private String phoneNumber;

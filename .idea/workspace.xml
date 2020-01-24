@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b11259ab-9d3b-4d65-a48a-e37e23816b64" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="b11259ab-9d3b-4d65-a48a-e37e23816b64" name="Default Changelist" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Autonoleggio/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Autonoleggio/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Autonoleggio/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Autonoleggio/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Autonoleggio/Rental.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Autonoleggio/Rental.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Autonoleggio/RentalManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Autonoleggio/RentalManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Autonoleggio/Vehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Autonoleggio/Vehicle.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rental.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rental.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RentalManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RentalManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vehicle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +73,32 @@
       <option name="presentableId" value="Default" />
       <updated>1579274375419</updated>
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <created>1579871612186</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1579871612186</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="WindowStateProjectService">
     <state x="695" y="329" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579812632867">
@@ -83,26 +109,30 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="173" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1579275502624" />
-    <state width="1877" height="149" key="GridCell.Tab.0.bottom" timestamp="1579818040630">
+    <state x="614" y="118" key="CommitChangelistDialog2" timestamp="1579871755617">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="149" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1579818040630" />
-    <state width="1877" height="149" key="GridCell.Tab.0.center" timestamp="1579818040630">
+    <state x="614" y="118" key="CommitChangelistDialog2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1579871755617" />
+    <state width="1877" height="474" key="GridCell.Tab.0.bottom" timestamp="1579871771772">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="149" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1579818040630" />
-    <state width="1877" height="149" key="GridCell.Tab.0.left" timestamp="1579818040630">
+    <state width="1877" height="474" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1579871771772" />
+    <state width="1877" height="474" key="GridCell.Tab.0.center" timestamp="1579871771771">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="149" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1579818040630" />
-    <state width="1877" height="149" key="GridCell.Tab.0.right" timestamp="1579818040630">
+    <state width="1877" height="474" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1579871771771" />
+    <state width="1877" height="474" key="GridCell.Tab.0.left" timestamp="1579871771771">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="149" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1579818040630" />
-    <state x="656" y="350" key="com.intellij.ide.util.TipDialog" timestamp="1579871507761">
+    <state width="1877" height="474" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1579871771771" />
+    <state width="1877" height="474" key="GridCell.Tab.0.right" timestamp="1579871771771">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="656" y="350" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1579871507761" />
+    <state width="1877" height="474" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1579871771771" />
+    <state x="656" y="350" key="com.intellij.ide.util.TipDialog" timestamp="1579871954285">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="656" y="350" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1579871954285" />
     <state x="2576" y="350" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1579299211312" />
   </component>
 </project>
