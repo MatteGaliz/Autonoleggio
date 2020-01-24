@@ -31,7 +31,7 @@ public class Customer extends Person {
     
     @Override
     public String toString() {
-        return "Customer{\n" + "taxCode=" + taxCode + ",\n phoneNumber=" + phoneNumber + "\n}";
+        return "CLIENTE\n"+"nome:\t"+getName()+"\ncognome:\t"+getSurname()+"\nsesso:\t"+getGender()+"\neta'\t"+getAge()+"\nnumero di telefono:\t"+phoneNumber+"\ncodice fiscale:\t"+taxCode;
     }
     
 }

@@ -2,15 +2,13 @@
  * @author Matteo Galiazzo
  */
 public class Vehicle {
-    private int veichleID;
     private String licensePlate;
     private String manufacturer;
     private String model;
     private short seats;
     private boolean booked;
     
-    public Vehicle(int veichleID, String licensePlate, String manifacturer, String model, short seats, boolean booked) {
-        this.veichleID = veichleID;
+    public Vehicle(String licensePlate, String manifacturer, String model, short seats, boolean booked) {
         this.licensePlate = licensePlate;
         this.manufacturer = manifacturer;
         this.model = model;
@@ -18,20 +16,11 @@ public class Vehicle {
         this.booked = booked;
     }
     
-    public Vehicle(int veichleID, String licensePlate, String manufacturer, String model, short seats) {
-        this.veichleID = veichleID;
+    public Vehicle(String licensePlate, String manufacturer, String model, short seats) {
         this.licensePlate = licensePlate;
         this.manufacturer = manufacturer;
         this.model = model;
         this.seats = seats;
-    }
-    
-    public int getVeichleID() {
-        return veichleID;
-    }
-    
-    public void setVeichleID(int veichleID) {
-        this.veichleID = veichleID;
     }
     
     public String getLicensePlate() {
@@ -76,7 +65,7 @@ public class Vehicle {
     
     @Override
     public String toString() {
-        return "Vehicle{\n" + "veichleID=" + veichleID + ",\n licensePlate=" + licensePlate + ",\n manifacturer=" + manufacturer + ",\n model=" + model + ",\n seats=" + seats + ",\n booked=" + booked + "\n}";
+        return "Vehicle{\n" + "licensePlate=" + licensePlate + ",\n manifacturer=" + manufacturer + ",\n model=" + model + ",\n seats=" + seats + ",\n booked=" + booked + "\n}";
     }
     
     
