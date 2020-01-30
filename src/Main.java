@@ -36,11 +36,12 @@ public class Main {
         Vehicle vehicle;
 
         RentalManager rentalManager = new RentalManager();
-        try {
-            rentalManager.readDataFiles();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+            try {
+                rentalManager.readDataFiles();
+            } catch (IOException e) {
+            } catch (ClassNotFoundException e){
+                e.printStackTrace();
+            }
 
         /*
         rentalManager.addRent(new Customer("taxCode", "phoneNumber", "name", "surname", Gender.MALE, 18), new Vehicle(1, "AA000AA", "manufacturer", "model", (short) 5, true), new Date(), new Date());
@@ -152,7 +153,6 @@ public class Main {
                     System.out.println("100%");
                     Thread.sleep(200);
                     System.out.println("Dati salvati correttamente");
-                    Thread.sleep(1000);
                     active = false;
                     break;
                 default:

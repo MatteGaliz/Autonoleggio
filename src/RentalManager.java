@@ -16,19 +16,19 @@ riapro il prorgramma devo
 voglio uccidermi
  */
 public class RentalManager implements Serializable {
-
+    
     // 3 ArrayList che tengono clienti veicoli e noleggi attivi
     private ArrayList<Customer> customers;
     private ArrayList<Vehicle> vehicles;
     private ArrayList<Rental> rentals;
-
+    
     private String customersFileName = "customersData.dat";
     private String vehiclesFileName = "vehiclesData.dat";
     private String rentalsFileName = "rentalsData.dat";
-
+    
     private int rentalCode;
     private String rentalCodeFileName = "rentalCodes.dat";
-
+    
     public RentalManager() {
         // TODO: inserire il codice di noleggio massimo precedente
         this.rentalCode = 1;
@@ -36,7 +36,7 @@ public class RentalManager implements Serializable {
         vehicles = new ArrayList<>();
         rentals = new ArrayList<>();
     }
-
+    
     /**
      * metodo che aggiunge un nuovo noleggio, e che prima verifica se sono gia'
      * presenti la macchina e il cliente nel registro poi boh mette data di
@@ -71,7 +71,7 @@ public class RentalManager implements Serializable {
         rentals.add(new Rental(rentalCode, newVehicle, newCustomer, startDate, endDate));
         rentalCode++;
     }
-
+    
     // metodo che rimuove una macchina dal noleggio e la segna come non prenotata
     public void removeRent(int returningRentalCode) {
         for (int i = 0; i < rentals.size(); i++) {
@@ -82,29 +82,29 @@ public class RentalManager implements Serializable {
             }
         }
     }
-
+    
     // metodo che ritorna un noleggio a un certo indice per visualizzarlo nel main
     public Rental getRentalAt(int i) {
         return rentals.get(i);
     }
-
+    
     // metodo che stampa i noleggi attivi
     public void printRentals() {
         for (Rental rental : rentals) {
             System.out.println(rental);
         }
     }
-
+    
     // metodo che aggiunge un veicolo al registro
     public void addVeichle(Vehicle v) {
         vehicles.add(v);
     }
-
+    
     // metodo che ritorna un veicolo a un certo indice per visualizzarlo nel main
     public Vehicle getVehicleAt(int i) {
         return vehicles.get(i);
     }
-
+    
     // metodo che rimuove un veicolo
     public void removeVeichle(String licensePlate) {
         for (int i = 0; i < vehicles.size(); i++) {
@@ -114,24 +114,24 @@ public class RentalManager implements Serializable {
             }
         }
     }
-
+    
     // metodo che stampa i veicoli
     public void printVehicles() {
         for (Vehicle vehicle : vehicles) {
             System.out.println(vehicle);
         }
     }
-
+    
     // aggiunge un cliente al registro
     public void addCustomer(Customer c) {
         customers.add(c);
     }
-
+    
     // ritorna al main un cliente a un certo indice
     public Customer getCustomerAt(int i) {
         return customers.get(i);
     }
-
+    
     // rimuove un cliente
     public void removeCustomer(String taxCode) {
         for (int i = 0; i < customers.size(); i++) {
@@ -141,14 +141,14 @@ public class RentalManager implements Serializable {
             }
         }
     }
-
+    
     // metodo per stampare i clienti
     public void printCustomers() {
-        for (Customer customer : customers) {
-            System.out.println(customer);
+        for (int i = 0; i < customers.size(); i++) {
+            System.out.println(customers.get(i));
         }
     }
-
+    
     // metodo per scrivere i file dat con i dati
     public void writeDataFiles() throws IOException {
         // write rentals
@@ -157,6 +157,7 @@ public class RentalManager implements Serializable {
         for (Rental rental : rentals) {
             rentalsFile.writeObject(rental);
         }
+        rentalsFile.flush();
         rentalsFile.close();
         // write customers
         new File(customersFileName);
@@ -164,6 +165,7 @@ public class RentalManager implements Serializable {
         for (Customer value : customers) {
             customerFile.writeObject(value);
         }
+        customerFile.flush();
         customerFile.close();
         // write vehicles
         new File(vehiclesFileName);
@@ -171,16 +173,18 @@ public class RentalManager implements Serializable {
         for (Vehicle value : vehicles) {
             vehiclesFile.writeObject(value);
         }
+        vehiclesFile.flush();
         vehiclesFile.close();
         // write rentalCode
         new File(rentalCodeFileName);
         ObjectOutputStream rentalCodeFile = new ObjectOutputStream(new FileOutputStream(rentalCodeFileName));
         rentalCodeFile.write(rentalCode);
+        rentalCodeFile.flush();
         rentalCodeFile.close();
     }
-
-    // metodo per leggere i file dat salvati
-    public void readDataFiles() throws IOException, ClassNotFoundException {
+    
+    // controlla se il file esiste e in caso contrario li crea
+    public void checkFiles() throws IOException {
         File f = new File(rentalsFileName);
         File f1 = new File(customersFileName);
         File f2 = new File(vehiclesFileName);
@@ -190,29 +194,37 @@ public class RentalManager implements Serializable {
             f1.createNewFile();
             f2.createNewFile();
             f3.createNewFile();
-        } else {
-            // read rentals list
+        }
+    }
+    
+    public void importRentalsData() throws IOException, ClassNotFoundException {
         ObjectInputStream rentalData = new ObjectInputStream(new FileInputStream(rentalsFileName));
         while (rentalData.available() != 0) {
             rentals.add((Rental) rentalData.readObject());
         }
         rentalData.close();
-        // read customers list
+    }
+    
+    public void importCustomersData() throws IOException, ClassNotFoundException {
         ObjectInputStream customerData = new ObjectInputStream(new FileInputStream(customersFileName));
         while (customerData.available() != 0) {
             customers.add((Customer) customerData.readObject());
         }
         customerData.close();
-        // read vehicles list
+    }
+    
+    public void importVehiclesData() throws IOException, ClassNotFoundException {
         ObjectInputStream vehicleData = new ObjectInputStream(new FileInputStream(vehiclesFileName));
         while (vehicleData.available() != 0) {
             vehicles.add((Vehicle) vehicleData.readObject());
+            vehicleData.close();
         }
-        vehicleData.close();
-        // read rentalCode
+    }
+    
+    public void readRentalCodeData() throws IOException {
         ObjectInputStream rentalCodeData = new ObjectInputStream(new FileInputStream(rentalCodeFileName));
         this.rentalCode = rentalCodeData.read();
         rentalCodeData.close();
-        }
     }
+    
 }
