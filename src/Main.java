@@ -47,13 +47,7 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        /*
-        rentalManager.addRent(new Customer("taxCode", "phoneNumber", "name", "surname", Gender.MALE, 18), new Vehicle(1, "AA000AA", "manufacturer", "model", (short) 5, true), new Date(), new Date());
-        rentalManager.addRent(new Customer("taxCode1", "phoneNumber1", "name1", "surname1", Gender.MALE, 19), new Vehicle(2, "AA001AA", "manufacturer1", "model1", (short) 5, true), new Date(), new Date());
-        System.out.println(rentalManager.getRentalAt(0));
-        System.out.println(rentalManager.getRentalAt(1));
-         */
+        
         System.out.println("---SOFTWARE DI GESTIONE DELL' AUTONOLEGGIO---");
         while (active) {
             System.out.println("\n-| seleziona l'azione da compiere |-\n");

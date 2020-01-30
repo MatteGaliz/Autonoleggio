@@ -7,14 +7,6 @@ import java.time.LocalDate;
  * @author Matteo Galiazzo
  */
 
-/*
-SFOGHI PERSONALI E RIFLESSIONI SUL PROGRAMMA
-ho appena scoperto che devo gestire il codice di noleggio e che ogni volta che
-riapro il prorgramma devo
--riempire gli arraylist con noleggi veicoli e clienti
--cercare il numero massimo di noleggio a cui sono arrivato e metterlo dentro rentalCode
-voglio uccidermi
- */
 public class RentalManager implements Serializable {
     
     // 3 ArrayList che tengono clienti veicoli e noleggi attivi
