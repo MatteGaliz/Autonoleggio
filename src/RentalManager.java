@@ -221,7 +221,7 @@ public class RentalManager implements Serializable {
         }
     }
     
-    public void readRentalCodeData() throws IOException {
+    public void importRentalCodeData() throws IOException {
         ObjectInputStream rentalCodeData = new ObjectInputStream(new FileInputStream(rentalCodeFileName));
         this.rentalCode = rentalCodeData.read();
         rentalCodeData.close();

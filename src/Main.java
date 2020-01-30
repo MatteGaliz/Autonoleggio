@@ -36,12 +36,15 @@ public class Main {
         Vehicle vehicle;
 
         RentalManager rentalManager = new RentalManager();
-            try {
-                rentalManager.readDataFiles();
-            } catch (IOException e) {
-            } catch (ClassNotFoundException e){
-                e.printStackTrace();
-            }
+        try {
+            rentalManager.checkFiles();
+            rentalManager.importRentalsData();
+            rentalManager.importCustomersData();
+            rentalManager.importVehiclesData();
+            rentalManager.importRentalsData();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         /*
         rentalManager.addRent(new Customer("taxCode", "phoneNumber", "name", "surname", Gender.MALE, 18), new Vehicle(1, "AA000AA", "manufacturer", "model", (short) 5, true), new Date(), new Date());
