@@ -15,33 +15,35 @@ mostrare clienti
 mostrare auto
 mostrare noleggi
  */
+
 /**
  * @author Matteo Galiazzo
  */
 public class Main {
-
+    
     public static void main(String[] args) throws InterruptedException, ClassNotFoundException {
         Scanner scan = new Scanner(System.in);
-
+        
         boolean active = true;
         int mainSelection, secondSelection;
         String taxCodeToRemove;
         int returningRentalCode;
         String licensePlateToRemove;
-
+        
         LocalDate rentStartDate;
         LocalDate rentEndDate;
-
+        
         Customer customer;
         Vehicle vehicle;
-
+        
         RentalManager rentalManager = new RentalManager();
         try {
-            rentalManager.checkFiles();
-            rentalManager.importRentalsData();
-            rentalManager.importCustomersData();
-            rentalManager.importVehiclesData();
-            rentalManager.importRentalsData();
+            if (rentalManager.checkFiles() == 1) {
+                rentalManager.importRentalsData();
+                rentalManager.importCustomersData();
+                rentalManager.importVehiclesData();
+                rentalManager.importRentalCodeData();
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -163,7 +165,7 @@ public class Main {
             }
         }
     }
-
+    
     public static String calculateTaxCode(String name, String surname, Gender gender, String phoneNumber) {
         String str;
         str = name.toUpperCase().substring(0, 3) + surname.toUpperCase().substring(0, 3);
@@ -175,7 +177,7 @@ public class Main {
         str += phoneNumber.substring(phoneNumber.length() - 3, phoneNumber.length());
         return str;
     }
-
+    
     public static Customer createNewCustomer() {
         String customerName;
         String customerSurname;
@@ -184,9 +186,9 @@ public class Main {
         String phoneNumber;
         String taxCode;
         int customerAge;
-
+        
         Scanner scan = new Scanner(System.in);
-
+        
         System.out.println("inserisci il nome del cliente");
         customerName = scan.nextLine();
         System.out.println("inserisci il cognome del cliente");
@@ -206,15 +208,15 @@ public class Main {
         taxCode = calculateTaxCode(customerName, customerSurname, gender, phoneNumber);
         return new Customer(taxCode, phoneNumber, customerName, customerSurname, gender, customerAge);
     }
-
+    
     public static Vehicle createNewVehicle(boolean toRent) {
         String licensePlate;
         String manufacturer;
         String model;
         short seats;
-
+        
         Scanner scan = new Scanner(System.in);
-
+        
         System.out.println("inserisci la targa del veicolo (formato: XX000XX)");
         licensePlate = scan.nextLine();
         System.out.println("inserisci il produttore del veicolo");

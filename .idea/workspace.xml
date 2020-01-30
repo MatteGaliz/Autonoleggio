@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b11259ab-9d3b-4d65-a48a-e37e23816b64" name="Default Changelist" comment="">
+    <list default="true" id="b11259ab-9d3b-4d65-a48a-e37e23816b64" name="Default Changelist" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customersData.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Autonoleggio/Gender.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Autonoleggio/Gender.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Autonoleggio/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Autonoleggio/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Autonoleggio/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Autonoleggio/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Autonoleggio/RentalManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gender.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RentalManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RentalManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +35,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -90,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580404590733</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update">
+      <created>1580404727536</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1580404727536</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -127,22 +142,22 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="614" y="118" key="CommitChangelistDialog2/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580404764721" />
-    <state width="1877" height="40" key="GridCell.Tab.0.bottom" timestamp="1580404715265">
+    <state width="1877" height="665" key="GridCell.Tab.0.bottom" timestamp="1580408363373">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="40" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580404715265" />
-    <state width="1877" height="40" key="GridCell.Tab.0.center" timestamp="1580404715265">
+    <state width="1877" height="665" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580408363373" />
+    <state width="1877" height="665" key="GridCell.Tab.0.center" timestamp="1580408363372">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="40" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580404715265" />
-    <state width="1877" height="40" key="GridCell.Tab.0.left" timestamp="1580404715265">
+    <state width="1877" height="665" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580408363372" />
+    <state width="1877" height="665" key="GridCell.Tab.0.left" timestamp="1580408363372">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="40" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580404715265" />
-    <state width="1877" height="40" key="GridCell.Tab.0.right" timestamp="1580404715265">
+    <state width="1877" height="665" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580408363372" />
+    <state width="1877" height="665" key="GridCell.Tab.0.right" timestamp="1580408363373">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="40" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580404715265" />
+    <state width="1877" height="665" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1580408363373" />
     <state x="552" y="259" key="Vcs.Push.Dialog.v2" timestamp="1580404730740">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

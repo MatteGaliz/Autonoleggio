@@ -154,25 +154,19 @@ public class RentalManager implements Serializable {
         // write rentals
         new File(rentalsFileName);
         ObjectOutputStream rentalsFile = new ObjectOutputStream(new FileOutputStream(rentalsFileName));
-        for (Rental rental : rentals) {
-            rentalsFile.writeObject(rental);
-        }
+        rentalsFile.writeObject(rentals);
         rentalsFile.flush();
         rentalsFile.close();
         // write customers
         new File(customersFileName);
         ObjectOutputStream customerFile = new ObjectOutputStream(new FileOutputStream(customersFileName));
-        for (Customer value : customers) {
-            customerFile.writeObject(value);
-        }
+        customerFile.writeObject(customers);
         customerFile.flush();
         customerFile.close();
         // write vehicles
         new File(vehiclesFileName);
         ObjectOutputStream vehiclesFile = new ObjectOutputStream(new FileOutputStream(vehiclesFileName));
-        for (Vehicle value : vehicles) {
-            vehiclesFile.writeObject(value);
-        }
+        vehiclesFile.writeObject(vehicles);
         vehiclesFile.flush();
         vehiclesFile.close();
         // write rentalCode
@@ -184,7 +178,7 @@ public class RentalManager implements Serializable {
     }
     
     // controlla se il file esiste e in caso contrario li crea
-    public void checkFiles() throws IOException {
+    public int checkFiles() throws IOException {
         File f = new File(rentalsFileName);
         File f1 = new File(customersFileName);
         File f2 = new File(vehiclesFileName);
@@ -194,37 +188,42 @@ public class RentalManager implements Serializable {
             f1.createNewFile();
             f2.createNewFile();
             f3.createNewFile();
-        }
+            return 0;
+        } else return 1;
     }
     
     public void importRentalsData() throws IOException, ClassNotFoundException {
-        ObjectInputStream rentalData = new ObjectInputStream(new FileInputStream(rentalsFileName));
-        while (rentalData.available() != 0) {
-            rentals.add((Rental) rentalData.readObject());
+        try {
+            ObjectInputStream rentalData = new ObjectInputStream(new FileInputStream(rentalsFileName));
+            rentals = ((ArrayList<Rental>) rentalData.readObject());
+        } catch (EOFException e) {
         }
-        rentalData.close();
     }
     
     public void importCustomersData() throws IOException, ClassNotFoundException {
-        ObjectInputStream customerData = new ObjectInputStream(new FileInputStream(customersFileName));
-        while (customerData.available() != 0) {
-            customers.add((Customer) customerData.readObject());
+        try {
+            ObjectInputStream customerData = new ObjectInputStream(new FileInputStream(customersFileName));
+            customers = ((ArrayList<Customer>) customerData.readObject());
+            customerData.close();
+        } catch (EOFException e) {
         }
-        customerData.close();
     }
     
     public void importVehiclesData() throws IOException, ClassNotFoundException {
-        ObjectInputStream vehicleData = new ObjectInputStream(new FileInputStream(vehiclesFileName));
-        while (vehicleData.available() != 0) {
-            vehicles.add((Vehicle) vehicleData.readObject());
+        try {
+            ObjectInputStream vehicleData = new ObjectInputStream(new FileInputStream(vehiclesFileName));
+            vehicles = ((ArrayList<Vehicle>) vehicleData.readObject());
             vehicleData.close();
+        } catch (EOFException e) {
         }
     }
     
     public void importRentalCodeData() throws IOException {
-        ObjectInputStream rentalCodeData = new ObjectInputStream(new FileInputStream(rentalCodeFileName));
-        this.rentalCode = rentalCodeData.read();
-        rentalCodeData.close();
+        try {
+            ObjectInputStream rentalCodeData = new ObjectInputStream(new FileInputStream(rentalCodeFileName));
+            this.rentalCode = rentalCodeData.read();
+            rentalCodeData.close();
+        } catch (EOFException e) {
+        }
     }
-    
 }
