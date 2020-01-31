@@ -3,19 +3,6 @@ import java.io.IOException;
 import java.util.Scanner;
 import java.time.LocalDate;
 
-/*
-TODO:
-salvare clienti
-togliere clienti
-salvare auto
-togliere auto
-salvare noleggi
-togliere noleggi
-mostrare clienti
-mostrare auto
-mostrare noleggi
- */
-
 /**
  * @author Matteo Galiazzo
  */
@@ -62,7 +49,8 @@ public class Main {
                     System.out.println("1. mostra noleggi attivi");
                     System.out.println("2. inserisci nuovo noleggio");
                     System.out.println("3. rimuovi noleggio");
-                    System.out.println("4. torna indietro");
+                    System.out.println("4. mostra noleggi rimossi");
+                    System.out.println("5. torna indietro");
                     secondSelection = scan.nextInt();
                     switch (secondSelection) {
                         case 1:
@@ -81,6 +69,8 @@ public class Main {
                             returningRentalCode = scan.nextInt();
                             rentalManager.removeRent(returningRentalCode);
                             break;
+                        case 4:
+                            rentalManager.showRemovedRents();
                         default:
                             break;
                     }

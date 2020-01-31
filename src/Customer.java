@@ -32,7 +32,7 @@ public class Customer extends Person implements Serializable {
     
     @Override
     public String toString() {
-        return "CLIENTE\n"+"nome:\t"+getName()+"\ncognome:\t"+getSurname()+"\nsesso:\t"+getGender()+"\neta'\t"+getAge()+"\nnumero di telefono:\t"+phoneNumber+"\ncodice fiscale:\t"+taxCode;
+        return "CLIENTE\n"+"nome:\t\t"+getName()+"\ncognome:\t"+getSurname()+"\nsesso:\t\t"+getGender()+"\neta'\t\t"+getAge()+"\ntelefono:\t"+phoneNumber+"\ncodice fiscale:\t"+taxCode;
     }
     
 }
