@@ -126,7 +126,11 @@ public class Main {
                 case 4:
                     try {
                         System.out.println("salvataggio dei dati in corso");
-                        rentalManager.writeDataFiles();
+                        rentalManager.writeRentalsFile();
+                        rentalManager.writeCustomersFile();
+                        rentalManager.writeVehiclesFile();
+                        rentalManager.writeRemovedRentals();
+                        rentalManager.writeRentalCodeFile();
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
