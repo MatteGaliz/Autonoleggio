@@ -61,6 +61,7 @@ public class RentalManager implements Serializable {
     }
     
     // metodo che rimuove una macchina dal noleggio e la segna come non prenotata
+    // aggiunge anche il noleggio al file di noleggi rientrati/rimossi
     public void removeRent(int returningRentalCode) {
         for (int i = 0; i < rentals.size(); i++) {
             if (rentals.get(i).getRentalCode() == returningRentalCode) {
@@ -245,6 +246,11 @@ public class RentalManager implements Serializable {
         }
     }
     
-    //Visualizzazione dell’elenco di tutti i veicoli disponibili per il noleggio
-    
+    public void showAllAvailableVehicles(){
+        for (Vehicle vehicle : vehicles) {
+            if (!vehicle.isBooked()) {
+                System.out.println(vehicle);
+            }
+        }
+    }
 }

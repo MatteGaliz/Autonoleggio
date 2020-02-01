@@ -104,7 +104,8 @@ public class Main {
                     System.out.println("1. mostra elenco autovetture");
                     System.out.println("2. inserisci nuova autovettura");
                     System.out.println("3. rimuovi autovettura");
-                    System.out.println("4. torna indietro");
+                    System.out.println("4. mostra autovetture disponibili per il noleggio");
+                    System.out.println("5. torna indietro");
                     secondSelection = scan.nextInt();
                     switch (secondSelection) {
                         case 1:
@@ -119,6 +120,8 @@ public class Main {
                             licensePlateToRemove = scan.nextLine();
                             rentalManager.removeVeichle(licensePlateToRemove);
                             break;
+                        case 4:
+                            rentalManager.showAllAvailableVehicles();
                         default:
                             break;
                     }
