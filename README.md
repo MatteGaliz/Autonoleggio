@@ -1,5 +1,5 @@
 # Autonoleggio
-Programma che consente di gestire un autonoleggio, con salvataggio a se' di clienti e autoveicoli, tiene traccia dei noleggi in corso e quelli passati, salvando il tutto in file .dat (uno per ogni categoria da salvare).
+Programma che consente di **gestire un autonoleggio**. Permette di *salvare clienti e autoveicoli*, *tenere traccia dei noleggi in corso e quelli passati*, salvando il tutto nella memoria del computer in appositi **file .dat** (uno per ogni categoria da salvare).
 
 ## Feature
 - ##### salvataggi in memoria
