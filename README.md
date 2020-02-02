@@ -3,7 +3,7 @@ Programma che consente di gestire un autonoleggio, con salvataggio a se' di clie
 ## Feature
 
 ##### - salvataggi in memoria
-&nbsp;&nbsp;&nbsp;&nbsp;- [x] salvataggio dei noleggi su file
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- [x] salvataggio dei noleggi su file
 &nbsp;&nbsp;&nbsp;&nbsp;- [x] salvataggio dei clienti su file
 &nbsp;&nbsp;&nbsp;&nbsp;- [x] salvataggio dei veicoli su file
 &nbsp;&nbsp;&nbsp;&nbsp;- [x] salvataggio dei veicoli rimossi su file
