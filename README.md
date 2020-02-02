@@ -1,7 +1,7 @@
 # Autonoleggio
 Programma che consente di gestire un autonoleggio, con salvataggio a se' di clienti e autoveicoli, tiene traccia dei noleggi in corso e quelli passati, salvando il tutto in file .dat (uno per ogni categoria da salvare).
-## Feature
 
+- ## Feature
 ##### salvataggi in memoria
 - [x] salvataggio dei noleggi su file <br>
 - [x] salvataggio dei clienti su file
@@ -16,6 +16,6 @@ Programma che consente di gestire un autonoleggio, con salvataggio a se' di clie
 - [x] visualizzazione dei clienti
 - [x] visualizzazione dei veicoli
 - [x] visualizzazione dei veicoli disponibili per il noleggio
-### generali
+##### generali
 - [x] codice commentato
 - [ ] javadoc
