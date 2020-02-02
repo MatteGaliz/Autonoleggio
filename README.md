@@ -2,11 +2,11 @@
 Programma che consente di gestire un autonoleggio, con salvataggio a se' di clienti e autoveicoli, tiene traccia dei noleggi in corso e quelli passati, salvando il tutto in file .dat (uno per ogni categoria da salvare).
 ## Feature
 
-##### salvataggi in memoria
-- [x] salvataggio dei noleggi su file
-- [x] salvataggio dei clienti su file
-- [x] salvataggio dei veicoli su file
-- [x] salvataggio dei veicoli rimossi su file
+##### - salvataggi in memoria
+&nbsp;&nbsp;&nbsp;&nbsp;- [x] salvataggio dei noleggi su file
+&nbsp;&nbsp;&nbsp;&nbsp;- [x] salvataggio dei clienti su file
+&nbsp;&nbsp;&nbsp;&nbsp;- [x] salvataggio dei veicoli su file
+&nbsp;&nbsp;&nbsp;&nbsp;- [x] salvataggio dei veicoli rimossi su file
 ##### eliminazione di salvataggi in memoria
 - [x] eliminazione dei noleggi dal file
 - [x] eliminazione dei clienti dal file
