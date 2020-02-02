@@ -8,7 +8,6 @@ import java.time.LocalDate;
  */
 public class RentalManager implements Serializable {
     
-    // 3 ArrayList che tengono clienti veicoli e noleggi attivi
     private ArrayList<Customer> customers;
     private ArrayList<Vehicle> vehicles;
     private ArrayList<Rental> rentals;
@@ -23,7 +22,6 @@ public class RentalManager implements Serializable {
     private String rentalCodeFileName = "rentalCodes.dat";
     
     public RentalManager() {
-        // TODO: inserire il codice di noleggio massimo precedente
         this.rentalCode = 1;
         customers = new ArrayList<>();
         vehicles = new ArrayList<>();
@@ -41,8 +39,8 @@ public class RentalManager implements Serializable {
                 break;
             }
         }
-        for (Vehicle value : vehicles) {
-            if (value.getLicensePlate().equals(newVehicle.getLicensePlate())) {
+        for (Vehicle vehicle : vehicles) {
+            if (vehicle.getLicensePlate().equals(newVehicle.getLicensePlate())) {
                 vehicleAlreadyRegistered = true;
                 break;
             }
@@ -252,5 +250,14 @@ public class RentalManager implements Serializable {
                 System.out.println(vehicle);
             }
         }
+    }
+    
+    public boolean vehicleCanBeBooked(String licensePlateToCheck){
+        for (Vehicle vechile : vehicles){
+            if (vechile.getLicensePlate().equals(licensePlateToCheck)){
+                return false;
+            }
+        }
+        return true;
     }
 }

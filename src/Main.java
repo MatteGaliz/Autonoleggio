@@ -58,11 +58,15 @@ public class Main {
                             break;
                         case 2:
                             // inserisci il nuovo noleggio
-                            customer = createNewCustomer();
-                            vehicle = createNewVehicle(true);
-                            rentStartDate = LocalDate.now();
-                            rentEndDate = LocalDate.now().plusMonths(1);
-                            rentalManager.addRent(customer, vehicle, rentStartDate, rentEndDate);
+                            try {
+                                customer = createNewCustomer();
+                                vehicle = createNewVehicle(true);
+                                rentStartDate = LocalDate.now();
+                                rentEndDate = LocalDate.now().plusMonths(1);
+                                rentalManager.addRent(customer, vehicle, rentStartDate, rentEndDate);
+                            } catch (VehicleNotBookableException e) {
+                                e.printStackTrace();
+                            }
                             break;
                         case 3:
                             System.out.println("inserisci il codice del noleggio in ritorno");
@@ -112,8 +116,12 @@ public class Main {
                             rentalManager.printRentals();
                             break;
                         case 2:
-                            vehicle = createNewVehicle(false);
-                            rentalManager.addVeichle(vehicle);
+                            try {
+                                vehicle = createNewVehicle(false);
+                                rentalManager.addVeichle(vehicle);
+                            } catch (VehicleNotBookableException e) {
+                                System.out.println("Eccezione: ");
+                            }
                             break;
                         case 3:
                             System.out.println("inserisci la targa del veicolo da rimuovere");
@@ -200,16 +208,21 @@ public class Main {
         return new Customer(taxCode, phoneNumber, customerName, customerSurname, gender, customerAge);
     }
     
-    public static Vehicle createNewVehicle(boolean toRent) {
+    public static Vehicle createNewVehicle(boolean toRent) throws VehicleNotBookableException{
         String licensePlate;
         String manufacturer;
         String model;
         short seats;
         
+        RentalManager rm = new RentalManager();
+        
         Scanner scan = new Scanner(System.in);
         
         System.out.println("inserisci la targa del veicolo (formato: XX000XX)");
         licensePlate = scan.nextLine();
+        if(toRent || !rm.vehicleCanBeBooked(licensePlate)){
+            throw new VehicleNotBookableException("il veicolo non puo' essere prenotato");
+        }
         System.out.println("inserisci il produttore del veicolo");
         manufacturer = scan.nextLine();
         System.out.println("inserisci il modello del veicolo");
