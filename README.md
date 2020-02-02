@@ -17,5 +17,6 @@ Programma che consente di **gestire un autonoleggio**. Permette di *salvare clie
 - [x] visualizzazione dei veicoli
 - [x] visualizzazione dei veicoli disponibili per il noleggio
 - ##### generali
+- [ ] gestione di edge cases
 - [x] codice commentato
 - [ ] javadoc
